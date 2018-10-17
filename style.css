@@ -1,0 +1,38 @@
+#guessingArea {
+    font-size: 48px;
+    font-weight: 500;
+    font-family: 'Pacifico', cursive;
+}
+
+body {
+    background-image: url("https://cityakuten.org/wp-content/uploads/2018/06/halloween-patterns-tumblr-best-of-16-best-tumblr-background-and-lock-screen-images-on-pinterest-of-halloween-patterns-tumblr.jpg");
+    background-repeat: repeat;
+    margin-top: 30px;
+}
+
+header {
+    font-family: 'Emilys Candy', cursive;
+    font-size: 25px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Emilys Candy', cursive;
+    font-size: 45px;
+    font-weight: 1000;
+    text-align: center;
+}
+
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 20px;
+    border-style: inset;
+    border-width: 1px;
+}
+
+.instruction {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-style: italic;
+}
