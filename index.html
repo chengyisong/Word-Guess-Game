@@ -24,18 +24,33 @@
              </div>
         </div>
 
-        <div class="row">
-            <div class="col-6">
-                <p class="instruction">Press Any Key to Get Started:</p>
+        <div class="row" id="main">
+            <div class="col-7">
+                <div class="instruction">
+                    <p class="underline"><strong>Instrutions: </strong></p>
+                    <ul> 
+                        <li>The word is a dessert <i class="far fa-grin-stars"></i><i class="far fa-grin-stars"></i></li>
+                        <li>You have 7 lifes to begin with;</li>
+                        <li>Whenever you guessed a wrong letter, you will lose 1 life;</li>
+                        <li>Press <strong>Any Key</strong> to Get Started!</li>
+                    </ul>
+                    
+                </div>
                 <br>
                 <div><span id="guessingArea"></span></div>
                 <br>     
             </div>
-                
-            <div class="col-6">
+            
+            <div class="col-1">
+                <br>
+                <div id="image-div"><img src="image/pic-6.png"></div>
+            </div>
+
+            <div class="col-4">
+                <br>
                 <div class="card">
                     <div class="card-body">
-                        <div>Numbers of Guesses Remaining: <strong><span id="remain">10</span></strong></div>
+                        <div>Number of Lifes Remaining: <strong><span id="remain">7</span></strong></div>
                         <br>
                         <div>Letters Already Guessed: <strong><span id="guessed"></span></strong></div>
                     </div>
@@ -70,7 +85,7 @@
     }    
 
     // Based on the Randomly Generated word, set initial # of lifes
-    var remainNum = word.length;
+    var remainNum = 7;
     $("#remain").text(remainNum);
 
     // When Resetting the game..
@@ -84,9 +99,11 @@
             $("#guessingArea").append("_ ");
             isGuessed[i]=false;
         }
-        remainNum = word.length;
+        remainNum = 7;
         $("#remain").text(remainNum);
         $("#guessed").text("");
+        letterGuessed=[];
+        $("#image-div").html("<img src='image/pic-6.png'/>");
     }
 
     // When Key is pressed...
@@ -155,6 +172,33 @@
                             reset();
                         }
                         
+                    }
+
+                    // // // change image based on # of Lifes
+                    if (remainNum === 6 ) {
+                        $("#image-div").html("<img src='image/pic-5.png'/>");
+                    }
+
+                    if (remainNum === 5 ) {
+                        $("#image-div").html("<img src='image/pic-4.png'/>");
+                    }
+
+
+                    if (remainNum === 4 ) {
+                        $("#image-div").html("<img src='image/pic-3.png'/>");
+                    }
+
+
+                    if (remainNum === 3 ) {
+                        $("#image-div").html("<img src='image/pic-2.png'/>");
+                    }
+
+                    if (remainNum === 2 ) {
+                        $("#image-div").html("<img src='image/pic-1.png'/>");
+                    }
+
+                    if (remainNum === 1 ) {
+                        $("#image-div").html("<img src='image/pic-0.png'/>");
                     }
 
                     // Game over if Life = 0 
