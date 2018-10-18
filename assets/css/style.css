@@ -49,3 +49,9 @@ hr {
     padding-bottom: 40px;
     padding-top: 30px;
 }
+
+#playerName {
+    font-family: 'Pacifico', cursive;
+    font-weight: 300;
+}
+
