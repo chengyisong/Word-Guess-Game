@@ -18,7 +18,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <header>Hangman for Foodies</header>
+                <header><i class="fas fa-utensils"></i>  Hangman for Foodies  <i class="fas fa-utensils"></i></header>
                 <h1>Guess that Word (Yummy!)</h1>
                 <hr>
              </div>
@@ -69,12 +69,18 @@
         
         
     </div>
+
+    <audio id="winningSound">
+        <source src="assets/winning.mp3" type="audio/mpeg">
+    </audio>
+
 </body>
 
 
 <script type=text/javascript>
 
     var player = prompt("Please enter your name:");
+    var winningSound = document.getElementById("winningSound"); 
 
     // Set Variables
     var remainNum=document.getElementById("remain");
@@ -186,6 +192,7 @@
                         $("#win").text(winNum);
                         console.log(winNum);
                         setTimeout(function() {
+                            winningSound.play();
                             alert ("Congratulations, you have guessed the word: \n" + word + "!");
                             var anotherGame = confirm("Do you want to play another game?");
                             if (anotherGame === true) {
